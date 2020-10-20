@@ -2,48 +2,25 @@
 <html>
 <head>
 	<title>TicTacToe</title>
+	<link rel="stylesheet" href="styles.css">
 	<script src='main.js'></script>
-	<style >
-		.buttons
-		{
-			color: #ffffff;
-			height: 100px;
-			width: 100px;
-			text-align: center;
-			text-shadow: transparent;
-			font-style: italic;
-			font-size: 40px;
-			background-color: grey;
-			border-color: blue;
-		}
-.b2 {background-color: #006CBA; }		       
-.b3{background-color: #F44336;}
-.b4{background-color: #E7E7E7;}
-.b5{background-color: #555555;}
-.b6{background-color: #DC143C;}
-.b7{background-color: #708090;}
-.b8{background-color: #F0A68C;}
-.b9{background-color: #40E0D0;}
-	</style>
-
-
 </head>
 <body>
-	<h3>TicTacToe</h3>
+	<h1>TicTacToe</h1>
 	<div align="center">
-		<button class = "buttons" id = '1'  onClick = 'handleClick(1)'>T</button>
-		<button class = "buttons b2" id = '2'  onClick = 'handleClick(2)'>i</button>
-		<button class = "buttons b3" id = '3'  onClick = 'handleClick(3)'>c</button>
+		<button class = "buttons" id = '1'  onClick = 'handleClick(1)'>.</button>
+		<button class = "buttons b2" id = '2'  onClick = 'handleClick(2)'>.</button>
+		<button class = "buttons b3" id = '3'  onClick = 'handleClick(3)'>.</button>
 		<br/>
-		<button class = "buttons b4" id = '4'  onClick = 'handleClick(4)'>T</button>
-		<button class = "buttons b5" id = '5'  onClick = 'handleClick(5)'>a</button>
-		<button class = "buttons b6" id = '6'  onClick = 'handleClick(6)'>c</button>
+		<button class = "buttons b4" id = '4'  onClick = 'handleClick(4)'>.</button>
+		<button class = "buttons b5" id = '5'  onClick = 'handleClick(5)'>.</button>
+		<button class = "buttons b6" id = '6'  onClick = 'handleClick(6)'>.</button>
 		<br/>
-		<button class = "buttons b7" id = '7'  onClick = 'handleClick(7)'>T</button>
-		<button class = "buttons b8" id = '8'  onClick = 'handleClick(8)'>0</button>
-		<button class = "buttons b9" id = '9' onClick = 'handleClick(9)'>e</button>
+		<button class = "buttons b7" id = '7'  onClick = 'handleClick(7)'>.</button>
+		<button class = "buttons b8" id = '8'  onClick = 'handleClick(8)'>.</button>
+		<button class = "buttons b9" id = '9' onClick = 'handleClick(9)'>.</button>
 	
-	<div id = "winner"></div>
+	<h3 id = "winner"></h3>
 	</div>
 
 </body>
