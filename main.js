@@ -7,7 +7,10 @@ var flag = 0
 
 
 function handleClick(btnId)
-{   if(row1[btnId-1] === 0 || row2[btnId-4] === 0 || row3[btnId-7] === 0)
+{   
+	var winner = document.getElementById('winner')
+	
+	if(row1[btnId-1] === 0 || row2[btnId-4] === 0 || row3[btnId-7] === 0)
 	{
 		check = (check+1)%2;
 	}
@@ -17,11 +20,13 @@ function handleClick(btnId)
     {
     	if(check === 0)
     	{
-    		button.innerText = "o"
+			button.innerText = "O"
+			winner.innerHTML = "X's Turn"
     	}
     	else
         {
-    	button.innerText = "x"
+			button.innerText = "X"
+			winner.innerHTML = "O's Turn"
         }
     	
     }
@@ -63,7 +68,8 @@ function handleClick(btnId)
 	console.log(row3)
 console.log("......................")
 
-	var winner = document.getElementById('winner')
+
+	
 	if(row1[0] === 1 && row1[1] === 1 && row1[2] === 1 || 
 		row2[0] === 1 && row2[1] === 1 && row2[2] === 1 || 
 		row3[0] === 1 && row3[1] === 1 && row3[2] === 1 || 
@@ -72,10 +78,12 @@ console.log("......................")
 		row1[2] === 1 && row2[2] === 1 && row3[2] === 1 ||
 		row1[0] === 1 && row2[1] === 1 && row3[2] === 1 ||
 		row1[2] === 1 && row2[1] === 1 && row3[0] === 1)
-	{   if(flag === 0)
+	{   
+		if(flag === 0)
 		{
-		winner.innerText = "winner is player 2"
+		winner.innerHTML = "Winner is player 2";
 		}
+		
 		flag = 1
 	}
 	else if(row1[0] === 2 && row1[1] === 2 && row1[2] === 2 || 
@@ -89,9 +97,10 @@ console.log("......................")
 	{
 		if(flag === 0)
 		{
-        winner.innerText = "winner is player 1"
+		winner.innerHTML = "Winner is player 1";
         }
         flag = 1
 	}
+	
 }
 
